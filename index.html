@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .carousel {
+            width: 1100px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel img {
+            width: 1100px;
+            height: 400px;
+            display: none;
+            position: absolute;
+        }
+        .carousel img.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="member-area">
+            <i class="fas fa-user"></i> <!-- Ícone de pessoa -->
+            <span>Área de Membros</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#institucional">Institucional</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#novas-descobertas">Novas Descobertas</a></li>
+                <li><a href="#prevencoes">Prevenções e Recomendações</a></li>
+                <li><a href="#parceiros">Parceiros</a></li>
+            </ul>
+            <div class="underline"></div>
+        </nav>
+    </header>
+    <div class="carousel">
+        <img src="imagem/lab1.jfif" alt="Imagem 1" class="active">
+        <img src="imagem/lab2.jpg" alt="Imagem 2">
+        <img src="imagem/lab3.jpg" alt="Imagem 3">
+        <img src="imagem/lab4.jpg" alt="Imagem 4">
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        setInterval(() => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }, 3000);
+    </script>
+    <div class="footer">
+        <div class="footer-section">
+            <h2>Mapa do Site</h2>
+            <ul>
+                <li><a href="#">Institucional</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Novas Descobertas</a></li>
+                <li><a href="#">Prevenções e Recomendações</a></li>
+                <li><a href="#">Parceiros</a></li>
+                <li><a href="#">Área de Membros</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Fale Conosco</h2>
+            <ul>
+                <li><a href="#">Atendimento</a></li>
+                <li><a href="#">Seja um Parceiro</a></li>
+                <li><a href="#">Ouvidoria</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Transparência</h2>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Canal de Denúncias</a></li>
+                <li><a href="#">Código de Ética e Conduta</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Parceiros</h2>
+            <div class="logos">
+                <img src="" alt="Logo 1" class="logo">
+                <img src="logo2.png" alt="Logo 2" class="logo">
+                <img src="logo3.png" alt="Logo 3" class="logo">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

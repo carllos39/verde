@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Fundo branco */
+}
+
+header {
+    padding: 20px; /* Padding do header */
+}
+
+.member-area {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+    color: gray; /* Cor do texto em cinza */
+    margin-right: 25px; /* Margem à direita */
+    justify-content: flex-end; /* Alinha à direita */
+    margin-bottom: 80px; /* Espaçamento abaixo da área de membros */
+}
+
+.member-area i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* Coloca o menu abaixo da área de membros */
+    align-items: flex-end; /* Alinha o menu à direita */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right; /* Alinha o menu à direita */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px; /* Espaçamento entre os itens */
+    margin-right: 25px; /* Margem à direita para os textos do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray; /* Cor do texto em cinza */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Efeito ao passar o mouse */
+}
+
+.underline {
+    height: 2px; /* Altura do traço */
+    background-color: green; /* Cor do traço */
+    margin-top: 20px; /* Espaçamento acima do traço */
+    width: 50%; /* Largura do traço */
+    margin-left: auto; /* Alinha o traço à direita */
+    margin-right: 25px; /* Margem à direita do traço */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+}
